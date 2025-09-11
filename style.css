@@ -200,7 +200,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(computer.jpg);
+	background-image: url(images/computer.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -351,7 +351,7 @@ p {
 	width: 80%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 40px;
 }
 #projects .project-info {
 	padding: 30px;
@@ -361,7 +361,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #29323ce5 0%, #485563 100%);
 	color: white;
 }
 #projects .project-info h1 {
@@ -374,13 +374,13 @@ p {
 	margin-top: 10px;
 }
 #projects .project-info p {
-	color: white;
+	color: rgb(255, 255, 255);
 }
 #projects .project-img {
 	flex-basis: 50%;
 	height: 300px;
 	overflow: hidden;
-	position: relative;
+	position: relative;    
 }
 #projects .project-img:after {
 	content: '';
@@ -389,7 +389,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #5050503b 0%, #485563 100%);
 	opacity: 0.7;
 }
 #projects .project-img img {
@@ -411,6 +411,7 @@ p {
 #about .col-left {
 	width: 250px;
 	height: 360px;
+	border-radius: 40px;
 }
 #about .col-right {
 	width: 100%;
@@ -463,14 +464,14 @@ p {
 	width: 80%;
 	padding: 20px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 40px;
 	padding: 30px;
 	margin: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 18px 0 #00000064;
 	transition: 0.3s ease box-shadow;
 }
 #contact .contact-item:hover {
@@ -495,7 +496,7 @@ p {
 
 /* Footer */
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #463e45 0%, #65696e 100%);
 }
 #footer .footer {
 	min-height: 200px;
@@ -625,6 +626,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
+		border-radius: 20px;
 		border: 10px solid crimson;
 	}
 	#about .col-right {
