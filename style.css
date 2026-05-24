@@ -704,3 +704,80 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+/* ==========================================
+   Smooth Scroll Offsets & Scroll Animations
+   ========================================== */
+
+/* Offset for fixed header during smooth scroll */
+section {
+	scroll-margin-top: 8vh;
+}
+
+/* Base Scroll Reveal Style */
+.reveal {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: opacity, transform;
+}
+
+/* Left Slide Reveal */
+.reveal-left {
+	opacity: 0;
+	transform: translateX(-60px);
+	transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: opacity, transform;
+}
+
+/* Right Slide Reveal */
+.reveal-right {
+	opacity: 0;
+	transform: translateX(60px);
+	transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: opacity, transform;
+}
+
+/* Scale & Fade Reveal */
+.reveal-scale {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: opacity, transform;
+}
+
+/* Active State to Trigger Animations */
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-scale.active {
+	opacity: 1;
+	transform: translate(0) scale(1);
+}
+
+/* Helper Staggered Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Active Nav Link Glowing State */
+#header .nav-list ul li a.active-link {
+	color: crimson !important;
+	font-weight: 700;
+	letter-spacing: 0.25rem;
+	text-shadow: 0 0 10px rgba(220, 20, 60, 0.6);
+	transition: 0.3s ease all;
+}
+
+@media only screen and (min-width: 1200px) {
+	#header .nav-list ul li a.active-link {
+		letter-spacing: 0.2rem;
+	}
+}
+
