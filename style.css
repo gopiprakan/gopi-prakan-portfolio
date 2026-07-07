@@ -298,6 +298,11 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#services .service-item:hover {
+	transform: translateY(-10px) scale(1.02);
+	box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 #services .service-item::after {
 	content: '';
@@ -352,6 +357,11 @@ p {
 	margin: 20px auto;
 	overflow: hidden;
 	border-radius: 40px;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#projects .project-item:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 #projects .project-info {
 	padding: 30px;
@@ -436,6 +446,7 @@ p {
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
+	animation: floatImage 4s ease-in-out infinite;
 }
 #about .col-left .about-img::after {
 	content: '';
@@ -472,10 +483,11 @@ p {
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #00000064;
-	transition: 0.3s ease box-shadow;
+	transition: 0.4s ease box-shadow, transform 0.4s ease;
 }
 #contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	box-shadow: 0px 10px 20px 0 #0000008c;
+	transform: translateY(-10px);
 }
 #contact .icon {
 	width: 70px;
@@ -523,10 +535,11 @@ p {
 }
 #footer .social-item img {
 	filter: grayscale(1);
-	transition: 0.3s ease filter;
+	transition: filter 0.4s ease, transform 0.4s ease;
 }
 #footer .social-item:hover img {
 	filter: grayscale(0);
+	transform: scale(1.2) translateY(-5px);
 }
 #footer p {
 	color: white;
@@ -564,6 +577,17 @@ p {
 	100% {
 		color: crimson;
 		font-weight: 500;
+	}
+}
+@keyframes floatImage {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
 /* End Keyframes */
